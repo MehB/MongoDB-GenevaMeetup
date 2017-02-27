@@ -2,8 +2,7 @@
 
 ### MongoDB Automatic Installation (by packages)
 
-1. Add MongoDB repo.
-
+##### Add MongoDB repo.
 ```
 $ sudo vi /etc/yum.repos.d/mongodb-org-3.4.repo
 
@@ -16,22 +15,22 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
 
 ```
 
-2. Install MongoDB packages
+##### Install MongoDB packages
 
-`$ sudo yum install mongodb-org`
+`$ sudo yum install mongodb-org `
 
 
-3. Create the /data/db directory (optional)
+##### Create the /data/db directory (optional)
 
 `$ vi /home/mongodb/data/db`
 
 
-4. Start mongod service:
+##### Start mongod service:
 
 `$ sudo service mongod start`
 
 
-5. Service mongod status:
+##### Service mongod status:
 
 `$ sudo service mongod status`
 
@@ -40,17 +39,17 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
 
 ### Uninstall MongoDB automatic installation
 
-1. Stop mongod service
+##### Stop mongod service:
 
 `$ sudo service mongod stop`
 
 
-2. Remove Packages
+##### Remove Packages:
 
 `$ sudo yum erase $(rpm -qa | grep mongodb-org)`
 
 
-3. Remove Data and Logs
+##### Remove Data and Logs:
 
 `$ sudo rm -r /var/log/mongodb`
 
