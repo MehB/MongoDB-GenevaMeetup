@@ -60,4 +60,42 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
 
 ### MongoDB Manual Installation 
 
+Blog MongoDB manual installation: https://blog.dbi-services.com/mongodb-installation/
+
+##### Create mount points
+
+`sudo ./1_mfa_root.sh`
+
+
+##### Create MongoDB base directories
+
+`./2_mfa_mongodb.sh`
+
+##### Create MongoDB admin directories
+
+`./3_mfa_mdb1.sh`
+
+
+##### Install MongoDB 
+
+`./4_mongodb_installation.sh`
+
+
+##### Start MongoDB Manually 
+
+`$ /u00/app/mongodb/product/mongodb-linux-x86_64-3.4.2/bin/mongod --dbpath /u01/mongodbdata/MDB1/ --logpath /u02/mongodblog/MDB1/mongod.log --fork`
+
+
+##### Verify if mongod process is running
+
+`$ ps aux | grep mongod`
+
+
+##### Connect to Mongo Shell
+
+`$ /u00/app/mongodb/product/mongodb-linux-x86_64-3.4.2/bin/mongo`
+
+
+
+
 
